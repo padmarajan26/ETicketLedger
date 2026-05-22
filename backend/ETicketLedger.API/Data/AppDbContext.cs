@@ -80,21 +80,21 @@ public class AppDbContext : DbContext
             {
                 Id = 1, Name = "Gold", Description = "Gold tier ticket with standard access",
                 Price = 100m, TotalQuota = 100, RemainingQuota = 100, IsActive = true,
-                CreatedAt = new DateTime(2024, 1, 1), UpdatedAt = new DateTime(2024, 1, 1),
+                CreatedAt = new DateTime(2026, 1, 1), UpdatedAt = new DateTime(2026, 1, 1),
                 RowVersion = new byte[8]
             },
             new Ticket
             {
                 Id = 2, Name = "Premium", Description = "Premium tier ticket with lounge access",
                 Price = 200m, TotalQuota = 50, RemainingQuota = 50, IsActive = true,
-                CreatedAt = new DateTime(2024, 1, 1), UpdatedAt = new DateTime(2024, 1, 1),
+                CreatedAt = new DateTime(2026, 1, 1), UpdatedAt = new DateTime(2026, 1, 1),
                 RowVersion = new byte[8]
             },
             new Ticket
             {
                 Id = 3, Name = "VIP", Description = "VIP tier with exclusive backstage access",
                 Price = 500m, TotalQuota = 20, RemainingQuota = 20, IsActive = true,
-                CreatedAt = new DateTime(2024, 1, 1), UpdatedAt = new DateTime(2024, 1, 1),
+                CreatedAt = new DateTime(2026, 1, 1), UpdatedAt = new DateTime(2026, 1, 1),
                 RowVersion = new byte[8]
             }
         );
