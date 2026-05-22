@@ -30,8 +30,8 @@ jobs:
 
       - name: Test
         working-directory: backend
-        run: dotnet test --configuration Release --no-build --verbosity normal \
-               --logger "trx;LogFileName=test-results.trx" \
+        run: dotnet test --configuration Release --no-build --verbosity normal 
+               --logger "trx;LogFileName=test-results.trx" 
                --collect:"XPlat Code Coverage"
 
       - name: Upload test results
