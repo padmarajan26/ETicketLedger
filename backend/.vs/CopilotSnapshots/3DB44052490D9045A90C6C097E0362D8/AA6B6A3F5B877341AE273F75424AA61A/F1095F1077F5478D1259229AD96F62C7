@@ -1,0 +1,296 @@
+﻿using ETicketLedger.API.Data;
+using ETicketLedger.API.DTOs;
+using ETicketLedger.API.Enums;
+using ETicketLedger.API.Models;
+using ETicketLedger.API.Services;
+using FluentAssertions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Moq;
+using Xunit;
+
+namespace ETicketLedger.Tests;
+
+public class LedgerServiceTests
+{
+    private readonly AppDbContext _dbContext;
+    private readonly Mock<ILogger<LedgerService>> _loggerMock;
+    private readonly LedgerService _service;
+
+    public LedgerServiceTests()
+    {
+        var options = new DbContextOptionsBuilder<AppDbContext>()
+            .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+            .Options;
+
+        _dbContext = new AppDbContext(options);
+        _loggerMock = new Mock<ILogger<LedgerService>>();
+        _service = new LedgerService(_dbContext, _loggerMock.Object);
+    }
+
+    private Transaction CreateTransaction(decimal amount = 100m)
+    {
+        var transaction = new Transaction
+        {
+            Id = Guid.NewGuid(),
+            OrderId = Guid.NewGuid(),
+            Amount = amount,
+            PaymentMethod = "CreditCard",
+            Status = TransactionStatus.Pending,
+            CreatedAt = DateTime.UtcNow,
+            IsDeleted = false
+        };
+        _dbContext.Transactions.Add(transaction);
+        _dbContext.SaveChanges();
+        return transaction;
+    }
+
+    [Fact]
+    public async Task PostDoubleEntryAsync_WithValidTransaction_CreatesDebitAndCreditEntries()
+    {
+        // Arrange
+        var transaction = CreateTransaction(100m);
+        var ct = CancellationToken.None;
+
+        // Act
+        await _service.PostDoubleEntryAsync(transaction, ct);
+
+        // Assert
+        var entries = await _dbContext.LedgerEntries.ToListAsync();
+        entries.Should().HaveCount(2);
+
+        var debitEntry = entries.First(e => e.EntryType == EntryType.Debit);
+        var creditEntry = entries.First(e => e.EntryType == EntryType.Credit);
+
+        debitEntry.Amount.Should().Be(100m);
+        debitEntry.AccountCode.Should().Be("1010");
+        debitEntry.TransactionId.Should().Be(transaction.Id);
+
+        creditEntry.Amount.Should().Be(100m);
+        creditEntry.AccountCode.Should().Be("4010");
+        creditEntry.TransactionId.Should().Be(transaction.Id);
+    }
+
+    [Fact]
+    public async Task PostDoubleEntryAsync_WithZeroAmount_ThrowsInvalidOperationException()
+    {
+        // Arrange
+        var transaction = CreateTransaction(0m);
+        var ct = CancellationToken.None;
+
+        // Act & Assert
+        await Assert.ThrowsAsync<InvalidOperationException>(() => _service.PostDoubleEntryAsync(transaction, ct));
+    }
+
+    [Fact]
+    public async Task PostDoubleEntryAsync_WithNegativeAmount_ThrowsInvalidOperationException()
+    {
+        // Arrange
+        var transaction = CreateTransaction(-50m);
+        var ct = CancellationToken.None;
+
+        // Act & Assert
+        await Assert.ThrowsAsync<InvalidOperationException>(() => _service.PostDoubleEntryAsync(transaction, ct));
+    }
+
+    [Fact]
+    public async Task PostDoubleEntryAsync_DebitAndCreditAreEqual()
+    {
+        // Arrange
+        var transaction = CreateTransaction(250.50m);
+        var ct = CancellationToken.None;
+
+        // Act
+        await _service.PostDoubleEntryAsync(transaction, ct);
+
+        // Assert
+        var entries = await _dbContext.LedgerEntries.ToListAsync();
+        var totalDebits = entries.Where(e => e.EntryType == EntryType.Debit).Sum(e => e.Amount);
+        var totalCredits = entries.Where(e => e.EntryType == EntryType.Credit).Sum(e => e.Amount);
+
+        totalDebits.Should().Be(totalCredits);
+    }
+
+    [Fact]
+    public async Task PostDoubleEntryAsync_WithMultipleTransactions_CreatesEntriesForEach()
+    {
+        // Arrange
+        var transaction1 = CreateTransaction(100m);
+        var transaction2 = CreateTransaction(200m);
+        var ct = CancellationToken.None;
+
+        // Act
+        await _service.PostDoubleEntryAsync(transaction1, ct);
+        await _service.PostDoubleEntryAsync(transaction2, ct);
+
+        // Assert
+        var entries = await _dbContext.LedgerEntries.ToListAsync();
+        entries.Should().HaveCount(4);
+        entries.Count(e => e.TransactionId == transaction1.Id).Should().Be(2);
+        entries.Count(e => e.TransactionId == transaction2.Id).Should().Be(2);
+    }
+
+    [Fact]
+    public async Task PostDoubleEntryAsync_DescriptionContainsPaymentMethod()
+    {
+        // Arrange
+        var transaction = CreateTransaction(100m);
+        transaction.PaymentMethod = "QR";
+        _dbContext.SaveChanges();
+        var ct = CancellationToken.None;
+
+        // Act
+        await _service.PostDoubleEntryAsync(transaction, ct);
+
+        // Assert
+        var debitEntry = await _dbContext.LedgerEntries.FirstAsync(e => e.EntryType == EntryType.Debit);
+        debitEntry.Description.Should().Contain("QR");
+    }
+
+    [Fact]
+    public async Task GetBalanceAsync_WithNoEntries_ReturnsZeroBalance()
+    {
+        // Arrange
+        var ct = CancellationToken.None;
+
+        // Act
+        var balance = await _service.GetBalanceAsync(ct);
+
+        // Assert
+        balance.TotalDebits.Should().Be(0m);
+        balance.TotalCredits.Should().Be(0m);
+        balance.IsBalanced.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task GetBalanceAsync_WithBalancedEntries_ReturnsCorrectBalance()
+    {
+        // Arrange
+        var transaction1 = CreateTransaction(100m);
+        var transaction2 = CreateTransaction(50m);
+        await _service.PostDoubleEntryAsync(transaction1, CancellationToken.None);
+        await _service.PostDoubleEntryAsync(transaction2, CancellationToken.None);
+        var ct = CancellationToken.None;
+
+        // Act
+        var balance = await _service.GetBalanceAsync(ct);
+
+        // Assert
+        balance.TotalDebits.Should().Be(150m);
+        balance.TotalCredits.Should().Be(150m);
+        balance.IsBalanced.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task GetBalanceAsync_IsAlwaysBalanced_WhenEntriesArePostedCorrectly()
+    {
+        // Arrange
+        var transactions = Enumerable.Range(1, 5)
+            .Select(_ => CreateTransaction((decimal)new Random().Next(10, 1000)))
+            .ToList();
+
+        foreach (var tx in transactions)
+        {
+            await _service.PostDoubleEntryAsync(tx, CancellationToken.None);
+        }
+
+        // Act
+        var balance = await _service.GetBalanceAsync(CancellationToken.None);
+
+        // Assert
+        balance.IsBalanced.Should().BeTrue();
+        balance.TotalDebits.Should().Be(balance.TotalCredits);
+    }
+
+    [Fact]
+    public async Task GetEntriesAsync_ReturnsEntriesInDescendingOrder()
+    {
+        // Arrange
+        var transaction = CreateTransaction(100m);
+        await Task.Delay(10); // Ensure different timestamps
+        await _service.PostDoubleEntryAsync(transaction, CancellationToken.None);
+        var ct = CancellationToken.None;
+
+        // Act
+        var entries = await _service.GetEntriesAsync(ct);
+
+        // Assert
+        entries.Should().HaveCount(2);
+        (entries[0].PostedAt >= entries[1].PostedAt).Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task GetEntriesAsync_ReturnsCorrectDtoMapping()
+    {
+        // Arrange
+        var transaction = CreateTransaction(500m);
+        await _service.PostDoubleEntryAsync(transaction, CancellationToken.None);
+        var ct = CancellationToken.None;
+
+        // Act
+        var entries = await _service.GetEntriesAsync(ct);
+
+        // Assert
+        entries.Should().HaveCount(2);
+        entries.Should().AllSatisfy(e =>
+        {
+            e.Id.Should().NotBeEmpty();
+            e.TransactionId.Should().Be(transaction.Id);
+            e.AccountCode.Should().NotBeNullOrEmpty();
+            e.AccountName.Should().NotBeNullOrEmpty();
+            e.EntryType.Should().BeOneOf("Debit", "Credit");
+            e.Amount.Should().Be(500m);
+            e.Description.Should().NotBeNullOrEmpty();
+            e.PostedAt.Should().BeBefore(DateTime.UtcNow.AddSeconds(1));
+        });
+    }
+
+    [Fact]
+    public async Task GetEntriesAsync_WithMultipleTransactions_ReturnsBothInDescendingOrder()
+    {
+        // Arrange
+        var transaction1 = CreateTransaction(100m);
+        await _service.PostDoubleEntryAsync(transaction1, CancellationToken.None);
+
+        await Task.Delay(10);
+
+        var transaction2 = CreateTransaction(200m);
+        await _service.PostDoubleEntryAsync(transaction2, CancellationToken.None);
+        var ct = CancellationToken.None;
+
+        // Act
+        var entries = await _service.GetEntriesAsync(ct);
+
+        // Assert
+        entries.Should().HaveCount(4);
+        // Most recent entries should be first
+        var mostRecentTx = entries.First().TransactionId;
+        mostRecentTx.Should().Be(transaction2.Id);
+    }
+
+    [Fact]
+    public async Task PostDoubleEntryAsync_LogsSuccessfulPosting()
+    {
+        // Arrange
+        var transaction = CreateTransaction(100m);
+        var ct = CancellationToken.None;
+
+        // Act
+        await _service.PostDoubleEntryAsync(transaction, ct);
+
+        // Assert
+        _loggerMock.Verify(
+            x => x.Log(
+                LogLevel.Information,
+                It.IsAny<EventId>(),
+                It.Is<It.IsAnyType>((v, t) => v.ToString().Contains("Double-entry posted")),
+                It.IsAny<Exception>(),
+                It.IsAny<Func<It.IsAnyType, Exception, string>>()),
+            Times.Once);
+    }
+
+    public void Dispose()
+    {
+        _dbContext?.Dispose();
+    }
+}

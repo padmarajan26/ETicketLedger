@@ -1,0 +1,106 @@
+.ticket-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: 2px solid var(--color-border); /* overridden inline for tier colour */
+}
+
+.ticket-card--sold-out {
+  opacity: 0.6;
+}
+
+.ticket-card:not(.ticket-card--sold-out):hover {
+  transform: translateY(-4px);
+}
+
+/* Header */
+.ticket-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ticket-card__icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.ticket-card__name {
+  font-size: 22px;
+  font-weight: 700;
+  /* colour set inline via CSS var */
+}
+
+.ticket-card__description {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+/* Price */
+.ticket-card__price {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.ticket-card__currency {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+/* Quota */
+.ticket-card__quota-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+
+.ticket-card__quota-count {
+  color: var(--color-text);
+}
+
+.ticket-card__quota-count--sold-out {
+  color: var(--color-danger);
+}
+
+.ticket-card__bar-track {
+  background: var(--color-border);
+  border-radius: 99px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.ticket-card__bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s;
+}
+
+/* CTA */
+.ticket-card__btn {
+  margin-top: 4px;
+  padding: 12px 0;
+  border-radius: var(--radius-md);
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  transition: opacity 0.15s;
+  width: 100%;
+}
+
+.ticket-card__btn--active {
+  color: #0f172a;
+}
+
+.ticket-card__btn--disabled {
+  background: var(--color-border);
+  color: var(--color-hint);
+  cursor: not-allowed;
+}

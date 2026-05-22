@@ -1,0 +1,94 @@
+.success-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--color-bg);
+}
+
+.success-card {
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border colour set inline based on status */
+}
+
+.success-card__icon {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.success-card__status-title {
+  font-size: 26px;
+  font-weight: 800;
+  /* colour set inline */
+}
+
+.success-card__status-subtitle {
+  color: var(--color-muted);
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Detail rows */
+.success-card__detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+}
+
+.success-card__detail-row:last-of-type {
+  border-bottom: none;
+}
+
+.success-card__detail-label {
+  color: var(--color-muted);
+}
+
+.success-card__detail-value {
+  word-break: break-all;
+  max-width: 60%;
+  text-align: right;
+}
+
+.success-card__detail-value--id {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.success-card__detail-value--status-confirmed {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.success-card__detail-value--status-pending {
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+/* Back button */
+.success-card__back-btn {
+  margin-top: 8px;
+  padding: 13px 0;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--color-border);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 15px;
+  width: 100%;
+  transition: background 0.15s;
+}
+
+.success-card__back-btn:hover {
+  background: #475569;
+}

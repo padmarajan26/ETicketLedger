@@ -1,0 +1,298 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\PROJECTS\\ETicketLedger\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|ETicketLedger.Tests\\ETicketLedger.Tests.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.tests\\ledgerservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|ETicketLedger.Tests\\ETicketLedger.Tests.csproj|solutionrelative:eticketledger.tests\\ledgerservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|ETicketLedger.Tests\\ETicketLedger.Tests.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.tests\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|ETicketLedger.Tests\\ETicketLedger.Tests.csproj|solutionrelative:eticketledger.tests\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\services\\ledgerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\services\\ledgerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|ETicketLedger.Tests\\ETicketLedger.Tests.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.tests\\checkoutvalidatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|ETicketLedger.Tests\\ETicketLedger.Tests.csproj|solutionrelative:eticketledger.tests\\checkoutvalidatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\backgroundservices\\qrconfirmationqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\backgroundservices\\qrconfirmationqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\dtos\\ledgerbalancedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\dtos\\ledgerbalancedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\handlers\\qrhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\handlers\\qrhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\handlers\\creditcardhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\handlers\\creditcardhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|c:\\projects\\eticketledger\\backend\\eticketledger.api\\models\\paymentresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ETicketLedger.API\\ETicketLedger.API.csproj|solutionrelative:eticketledger.api\\models\\paymentresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderServiceTests.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.Tests\\OrderServiceTests.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.Tests\\OrderServiceTests.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.Tests\\OrderServiceTests.cs",
+              "RelativeToolTip": "ETicketLedger.Tests\\OrderServiceTests.cs",
+              "ViewState": "AgIAAKgBAAAAAAAAAAAkwK8BAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:51:58.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LedgerServiceTests.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.Tests\\LedgerServiceTests.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.Tests\\LedgerServiceTests.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.Tests\\LedgerServiceTests.cs",
+              "RelativeToolTip": "ETicketLedger.Tests\\LedgerServiceTests.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAqwCMBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:51:32.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckoutValidatorTests.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.Tests\\CheckoutValidatorTests.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.Tests\\CheckoutValidatorTests.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.Tests\\CheckoutValidatorTests.cs",
+              "RelativeToolTip": "ETicketLedger.Tests\\CheckoutValidatorTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T11:18:28.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\appsettings.Development.json",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\appsettings.Development.json",
+              "RelativeToolTip": "ETicketLedger.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-20T15:01:24.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\appsettings.json",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\appsettings.json",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\appsettings.json",
+              "RelativeToolTip": "ETicketLedger.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-20T14:58:12.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Program.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Program.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Program.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwB4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:57:48.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Models\\Order.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Models\\Order.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Models\\Order.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:47:33.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Models\\Transaction.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Models\\Transaction.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Models\\Transaction.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:47:15.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Services\\TicketService.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Services\\TicketService.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Services\\TicketService.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Services\\TicketService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwCMAAAC7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:56:16.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "QRHandler.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Handlers\\QRHandler.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Handlers\\QRHandler.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Handlers\\QRHandler.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Handlers\\QRHandler.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:47:00.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LedgerBalanceDto.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\DTOs\\LedgerBalanceDto.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\DTOs\\LedgerBalanceDto.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\DTOs\\LedgerBalanceDto.cs",
+              "RelativeToolTip": "ETicketLedger.API\\DTOs\\LedgerBalanceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:47:59.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PaymentResult.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Models\\PaymentResult.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Models\\PaymentResult.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Models\\PaymentResult.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Models\\PaymentResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:42:38.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreditCardHandler.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Handlers\\CreditCardHandler.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Handlers\\CreditCardHandler.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Handlers\\CreditCardHandler.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Handlers\\CreditCardHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:42:05.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Services\\OrderService.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Services\\OrderService.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Services\\OrderService.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAswCEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:41:45.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LedgerService.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Services\\LedgerService.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\Services\\LedgerService.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\Services\\LedgerService.cs",
+              "RelativeToolTip": "ETicketLedger.API\\Services\\LedgerService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwF0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:41:24.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QRConfirmationQueue.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\BackgroundServices\\QRConfirmationQueue.cs",
+              "RelativeDocumentMoniker": "ETicketLedger.API\\BackgroundServices\\QRConfirmationQueue.cs",
+              "ToolTip": "C:\\PROJECTS\\ETicketLedger\\backend\\ETicketLedger.API\\BackgroundServices\\QRConfirmationQueue.cs",
+              "RelativeToolTip": "ETicketLedger.API\\BackgroundServices\\QRConfirmationQueue.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAuwD8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:40:55.84Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

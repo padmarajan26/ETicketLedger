@@ -1,0 +1,129 @@
+/* ── Reset & tokens ──────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg:        #0f172a;
+  --color-surface:   #1e293b;
+  --color-border:    #334155;
+  --color-text:      #f1f5f9;
+  --color-muted:     #94a3b8;
+  --color-hint:      #64748b;
+  --color-success:   #22c55e;
+  --color-danger:    #ef4444;
+  --color-gold:      #f59e0b;
+  --color-premium:   #6366f1;
+  --color-vip:       #ec4899;
+  --radius-sm:       8px;
+  --radius-md:       10px;
+  --radius-lg:       16px;
+  --radius-xl:       18px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* ── App layout ──────────────────────────────────────────────────────────── */
+.app-header {
+  border-bottom: 1px solid var(--color-surface);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header__logo {
+  font-size: 28px;
+}
+
+.app-header__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.app-header__subtitle {
+  font-size: 12px;
+  color: var(--color-hint);
+}
+
+.app-header__refresh {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  color: var(--color-muted);
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.app-header__refresh:hover {
+  background: var(--color-border);
+}
+
+.app-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.app-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.app-hero__title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.app-hero__subtitle {
+  color: var(--color-hint);
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.app-loading {
+  text-align: center;
+  color: var(--color-hint);
+  font-size: 16px;
+  padding: 80px;
+}
+
+.app-error {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  color: var(--color-danger);
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
